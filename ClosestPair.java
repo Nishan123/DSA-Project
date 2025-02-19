@@ -1,4 +1,4 @@
-public class SecondQuestion{
+public class ClosestPair{
     public static int[] findClosestPair(int[] x_coords, int[] y_coords) {
         int n = x_coords.length;
         int minDistance = Integer.MAX_VALUE;

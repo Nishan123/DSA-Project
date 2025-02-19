@@ -1,4 +1,4 @@
-public class FirstQuestion{
+public class MinMeasurements{
     public static int minMeasurements(int k, int n) {
         long target = (long) n + 1;
         if (target == 0) {

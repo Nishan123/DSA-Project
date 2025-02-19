@@ -1,4 +1,4 @@
-public class FirstQuestion {
+public class MinimumRewards {
 
     public static int minRewards(int[] ratings) {
         if (ratings == null || ratings.length == 0) {

@@ -6,9 +6,9 @@ import java.util.List;
 import javax.swing.*;
 
 class Cell {
-    private int x;
+    private final int x;
     private int y;
-    private Color color;
+    private final Color color;
 
     public Cell(int x, int y, Color color) {
         this.x = x;
@@ -35,7 +35,7 @@ class Cell {
 
 class Block {
     private int[][] shape;
-    private Color color;
+    private final Color color;
     private int x;
     private int y;
 
@@ -114,8 +114,8 @@ class TetrisGame {
     public static final int WIDTH = 10;
     public static final int HEIGHT = 20;
 
-    private Queue<Block> blockQueue;
-    private Stack<Cell> gameBoard;
+    private final Queue<Block> blockQueue;
+    private final Stack<Cell> gameBoard;
     private Block currentBlock;
     private boolean gameOver;
     private int score;
@@ -260,7 +260,7 @@ class TetrisGame {
 
 class GameBoardPanel extends JPanel {
     private static final int CELL_SIZE = 30;
-    private TetrisGame game;
+    private final TetrisGame game;
 
     public GameBoardPanel(TetrisGame game) {
         this.game = game;
@@ -298,7 +298,7 @@ class GameBoardPanel extends JPanel {
 
 class PreviewPanel extends JPanel {
     private static final int CELL_SIZE = 20;
-    private TetrisGame game;
+    private final TetrisGame game;
 
     public PreviewPanel(TetrisGame game) {
         this.game = game;
@@ -399,18 +399,10 @@ public class TetrisFrame extends JFrame implements KeyListener {
     public void keyPressed(KeyEvent e) {
         if (!game.isGameOver()) {
             switch (e.getKeyCode()) {
-                case KeyEvent.VK_LEFT:
-                    game.moveLeft();
-                    break;
-                case KeyEvent.VK_RIGHT:
-                    game.moveRight();
-                    break;
-                case KeyEvent.VK_UP:
-                    game.rotate();
-                    break;
-                case KeyEvent.VK_DOWN:
-                    game.moveDown();
-                    break;
+                case KeyEvent.VK_LEFT -> game.moveLeft();
+                case KeyEvent.VK_RIGHT -> game.moveRight();
+                case KeyEvent.VK_UP -> game.rotate();
+                case KeyEvent.VK_DOWN -> game.moveDown();
             }
             gameBoardPanel.repaint();
         }
