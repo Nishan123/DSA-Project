@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class SmallestProduct {
+public class LowestInvestment {
 
     public static int kthSmallestProduct(int[] returns1, int[] returns2, int k) {
 
