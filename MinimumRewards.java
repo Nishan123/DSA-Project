@@ -37,12 +37,11 @@ public class MinimumRewards {
     }
 
     public static void main(String[] args) {
-        // Example 1
+    
         int[] ratings1 = {1, 0, 2};
         int result1 = minRewards(ratings1);
         System.out.println("Minimum rewards for ratings1: " + result1); // Expected output: 5
 
-        // Example 2
         int[] ratings2 = {1, 2, 2};
         int result2 = minRewards(ratings2);
         System.out.println("Minimum rewards for ratings2: " + result2); // Expected output: 4

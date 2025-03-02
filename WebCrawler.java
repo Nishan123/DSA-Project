@@ -136,20 +136,14 @@ public class WebCrawler {
     }
 
     public static void main(String[] args) {
-        // Create a web crawler with 10 threads.
         WebCrawler crawler = new WebCrawler(10);
 
-        // Seed the crawler with initial URLs.
+        // sources
         crawler.addUrl("http://example.com");
         crawler.addUrl("https://rahulpajiyar.com.np/");
 
-        // Start the crawling process.
         crawler.startCrawling();
-
-        // Output the number of crawled pages.
         System.out.println("Crawled pages: " + crawler.getCrawledData().size());
-
-        // Print fetched contents for each URL.
         for (Map.Entry<String, String> entry : crawler.getCrawledData().entrySet()) {
             System.out.println("URL: " + entry.getKey());
             System.out.println("Content:\n" + entry.getValue());

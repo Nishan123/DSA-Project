@@ -1,5 +1,3 @@
-
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -111,7 +109,7 @@ public class NetworkConnectivity {
     }
 
     public static void main(String[] args) {
-        // Test case
+     
         int n = 3;
         int[] modules = {1, 2, 2};
         int[][] connections = {{1, 2, 1}, {2, 3, 1}};
